@@ -53,19 +53,31 @@ flowchart TB
 
 # Repository Structure
 smart-skill-marketplace/
-├── backend/
-│   ├── api-gateway/
-│   ├── auth-service/
-│   ├── task-service/
-│   ├── bid-service/
-│   └── docker-compose.yml
 ├── frontend/
-│   └── skill-marketplace-ui/
+│   └── skill-marketplace-ui/          # React + Tailwind UI
+│
+├── backend/
+│   ├── api-gateway/                   # Spring Cloud Gateway
+│   │
+│   ├── auth-service/                  # Authentication & Authorization
+│   ├── profile-service/               # User Profile Management
+│   ├── task-service/                  # Task Management
+│   ├── bid-service/                   # Bidding System
+│   ├── review-service/                # Ratings & Reviews
+│   ├── notification-service/          # Notifications
+│   │
+│   ├── kafka/                         # Event Bus Configuration
+│   ├── mysql/                         # Database Scripts / Schemas
+│   │
+│   └── docker-compose.yml             # Local orchestration
+│
 ├── design/
-│   ├── HLD.md
-│   ├── LLD.md
-│   └── events.md
+│   ├── HLD.md                         # High Level Design
+│   ├── LLD.md                         # Low Level Design
+│   └── events.md                      # Kafka Event Contracts
+│
 └── README.md
+
 
 
 # Additional Information
