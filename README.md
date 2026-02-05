@@ -52,31 +52,39 @@ flowchart TB
 
 
 # Repository Structure
-smart-skill-marketplace/
-├── frontend/
-│   └── skill-marketplace-ui/          # React + Tailwind UI
+📦 smart-skill-marketplace
 │
-├── backend/
-│   ├── api-gateway/                   # Spring Cloud Gateway
-│   │
-│   ├── auth-service/                  # Authentication & Authorization
-│   ├── profile-service/               # User Profile Management
-│   ├── task-service/                  # Task Management
-│   ├── bid-service/                   # Bidding System
-│   ├── review-service/                # Ratings & Reviews
-│   ├── notification-service/          # Notifications
-│   │
-│   ├── kafka/                         # Event Bus Configuration
-│   ├── mysql/                         # Database Scripts / Schemas
-│   │
-│   └── docker-compose.yml             # Local orchestration
+├─ 🎨 frontend
+│  └─ ⚛️ skill-marketplace-ui
+│     ├─ React
+│     └─ Tailwind CSS
 │
-├── design/
-│   ├── HLD.md                         # High Level Design
-│   ├── LLD.md                         # Low Level Design
-│   └── events.md                      # Kafka Event Contracts
+├─ 🧠 backend
+│  │
+│  ├─ 🚪 api-gateway
+│  │  └─ Spring Cloud Gateway
+│  │
+│  ├─ 🔐 auth-service
+│  ├─ 👤 profile-service
+│  ├─ 📝 task-service
+│  ├─ 💰 bid-service
+│  ├─ ⭐ review-service
+│  ├─ 🔔 notification-service
+│  │
+│  ├─ 📨 kafka
+│  │  └─ Event Bus Configuration
+│  │
+│  ├─ 🗄️ mysql
+│  │  └─ Database Schemas
+│  │
+│  └─ 🐳 docker-compose.yml
 │
-└── README.md
+├─ 📐 design
+│  ├─ 🧩 HLD.md        # High-Level Design
+│  ├─ 🔍 LLD.md        # Low-Level Design
+│  └─ 📡 events.md     # Kafka Event Contracts
+│
+└─ 📘 README.md
 
 
 
