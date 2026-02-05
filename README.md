@@ -14,18 +14,21 @@ The system is designed to simulate how real-world freelance and talent marketpla
 
 ## 🏗️ System Architecture (High Level)
 Frontend (React + Tailwind)
-|
-v
+          |
+          v
 API Gateway (Spring Cloud Gateway)
-|
-
-| | | | | |
-Auth Profile Task Bid Review Notification
-Service Service Service Service Service Service
-|
+          |
+-------------------------------------------------
+|        |        |        |        |            |
+Auth   Profile   Task     Bid     Review   Notification
+Service Service  Service  Service  Service    Service
+          |
+          v
 Kafka (Event Bus)
-|
+          |
+          v
 MySQL Database
+
 
 
 # Repository Structure
