@@ -12,6 +12,21 @@ The **Smart Skill-Based Task Marketplace** allows:
 
 The system is designed to simulate how real-world freelance and talent marketplaces work, focusing on **scalability, security, and clean design**.
 
+## 🏗️ System Architecture (High Level)
+Frontend (React + Tailwind)
+|
+v
+API Gateway (Spring Cloud Gateway)
+|
+
+| | | | | |
+Auth Profile Task Bid Review Notification
+Service Service Service Service Service Service
+|
+Kafka (Event Bus)
+|
+MySQL Database
+
 
 # Repository Structure
 smart-skill-marketplace/
