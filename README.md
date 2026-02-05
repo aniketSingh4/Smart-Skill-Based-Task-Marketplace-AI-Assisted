@@ -1,6 +1,17 @@
 # Smart-Skill-Based-Task-Marketplace-AI-Assisted-
 An industry-grade, event-driven microservices platform that connects clients with skilled freelancers through secure authentication, task management, bidding workflows, and real-time notifications.  This project is being actively developed using modern backend, frontend, and DevOps technologies following real-world software engineering practices.
 
+#Overview
+
+The **Smart Skill-Based Task Marketplace** allows:
+- Clients to post tasks with required skills and budget
+- Freelancers to browse tasks and submit bids
+- Secure task assignment, tracking, and reviews
+- Event-driven communication between services
+- Scalable and maintainable microservices architecture
+
+The system is designed to simulate how real-world freelance and talent marketplaces work, focusing on **scalability, security, and clean design**.
+
 # Project Implementation Summary
 1. Designed an industry-grade microservices architecture using Spring Boot and Spring Cloud, separating core domains such as authentication, user profiles, task management, bidding,       reviews, and notifications.
 2. Implemented secure authentication and authorisation using Spring Security with JWT, enabling role-based access control for CLIENT, FREELANCER, and ADMIN users.
