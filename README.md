@@ -95,7 +95,6 @@ This ensures:
 ### Frontend
 - React
 - Tailwind CSS
-- Axios
 - React Router
 
 ### DevOps & Tools
@@ -103,18 +102,7 @@ This ensures:
 - Jenkins (CI/CD – in progress)
 - Git & GitHub
 - Postman
-- IntelliJ IDEA
-
----
-
-## 🚧 Current Status
-
-✔ Microservices architecture designed  
-✔ Eureka, API Gateway, Config Server setup  
-✔ Authentication service in progress  
-✔ Kafka and MySQL configured via Docker  
-✔ Frontend base project created  
-✔ HLD & LLD documentation in progress  
+- Eclipse IDEA
 
 ---
 
