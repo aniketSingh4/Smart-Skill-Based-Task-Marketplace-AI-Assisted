@@ -12,16 +12,6 @@ The **Smart Skill-Based Task Marketplace** allows:
 
 The system is designed to simulate how real-world freelance and talent marketplaces work, focusing on **scalability, security, and clean design**.
 
-# Project Implementation Summary
-1. Designed an industry-grade microservices architecture using Spring Boot and Spring Cloud, separating core domains such as authentication, user profiles, task management, bidding,       reviews, and notifications.
-2. Implemented secure authentication and authorisation using Spring Security with JWT, enabling role-based access control for CLIENT, FREELANCER, and ADMIN users.
-3. Developed RESTful APIs for task posting, bid submission, task assignment, and review management using Spring Data JPA with MySQL for transactional consistency.
-4. Integrated Apache Kafka to implement an event-driven architecture, allowing asynchronous communication between services for task creation, bid submission, task assignment, and      notification workflows.
-5. Configured API Gateway and Eureka Service Discovery to provide centralised routing, load balancing, and dynamic service registration.
-6. Containerised backend services, Kafka, and MySQL using Docker and Docker Compose to ensure consistent local and production-like environments.
-7. Built a React + Tailwind CSS frontend with role-based dashboards, enabling users to interact with backend services through a clean and intuitive UI.
-8. Set up CI/CD pipelines using Jenkins to automate build, test, and Docker image creation processes.
-9. Followed clean architecture principles, SOLID design, and proper documentation (HLD/LLD) to ensure scalability, maintainability, and ease of future enhancements.
 
 # Repository Structure
 smart-skill-marketplace/
@@ -38,4 +28,128 @@ smart-skill-marketplace/
 │   ├── LLD.md
 │   └── events.md
 └── README.md
+
+
+# Additional Information
+
+---
+
+## 🧩 Microservices Breakdown
+
+| Service Name | Responsibility |
+|-------------|----------------|
+| API Gateway | Central entry point, routing, security |
+| Auth Service | Signup, login, JWT authentication |
+| Profile Service | User skills, experience, portfolio |
+| Task Service | Task creation and management |
+| Bid Service | Freelancer proposals and bidding |
+| Matching Service | Skill-based matching (rule-based currently) |
+| Review Service | Ratings and feedback |
+| Notification Service | Email / real-time notifications |
+| Service Registry | Eureka discovery server |
+| Config Server | Centralized configuration |
+
+---
+
+## 🔐 Security Design
+
+- Implemented **Spring Security with JWT**
+- Role-Based Access Control (RBAC):
+  - CLIENT
+  - FREELANCER
+  - ADMIN
+- Password encryption using **BCrypt**
+- Token validation handled via API Gateway
+
+---
+
+## 🔁 Event-Driven Architecture (Kafka)
+
+Kafka is used to decouple services and enable asynchronous processing.
+
+### Example Events:
+- `TASK_CREATED`
+- `BID_SUBMITTED`
+- `TASK_ASSIGNED`
+- `TASK_COMPLETED`
+- `REVIEW_ADDED`
+
+This ensures:
+- Loose coupling between services
+- Better scalability
+- Fault tolerance
+
+---
+
+## 🛠️ Tech Stack
+
+### Backend
+- Java 17
+- Spring Boot
+- Spring Security
+- Spring Cloud (Gateway, Eureka, Config)
+- Spring Data JPA
+- Apache Kafka
+- MySQL
+
+### Frontend
+- React
+- Tailwind CSS
+- Axios
+- React Router
+
+### DevOps & Tools
+- Docker & Docker Compose
+- Jenkins (CI/CD – in progress)
+- Git & GitHub
+- Postman
+- IntelliJ IDEA
+
+---
+
+## 🚧 Current Status
+
+✔ Microservices architecture designed  
+✔ Eureka, API Gateway, Config Server setup  
+✔ Authentication service in progress  
+✔ Kafka and MySQL configured via Docker  
+✔ Frontend base project created  
+✔ HLD & LLD documentation in progress  
+
+---
+
+## 🔮 Future Enhancements
+
+- AI-based skill matching and ranking
+- ElasticSearch for advanced task search
+- Kubernetes deployment
+- Payment & escrow simulation
+- Monitoring with Prometheus and Grafana
+- Fraud detection and reputation scoring
+
+---
+
+## 🧪 How to Run (Local Setup)
+
+> Prerequisites:
+- Java 17
+- Docker & Docker Compose
+- Node.js (LTS)
+- Maven
+
+### Start Infrastructure into bash
+docker-compose up -d
+
+# Project Implementation Summary
+1. Designed an industry-grade microservices architecture using Spring Boot and Spring Cloud, separating core domains such as authentication, user profiles, task management, bidding,       reviews, and notifications.
+2. Implemented secure authentication and authorisation using Spring Security with JWT, enabling role-based access control for CLIENT, FREELANCER, and ADMIN users.
+3. Developed RESTful APIs for task posting, bid submission, task assignment, and review management using Spring Data JPA with MySQL for transactional consistency.
+4. Integrated Apache Kafka to implement an event-driven architecture, allowing asynchronous communication between services for task creation, bid submission, task assignment, and      notification workflows.
+5. Configured API Gateway and Eureka Service Discovery to provide centralised routing, load balancing, and dynamic service registration.
+6. Containerised backend services, Kafka, and MySQL using Docker and Docker Compose to ensure consistent local and production-like environments.
+7. Built a React + Tailwind CSS frontend with role-based dashboards, enabling users to interact with backend services through a clean and intuitive UI.
+8. Set up CI/CD pipelines using Jenkins to automate build, test, and Docker image creation processes.
+9. Followed clean architecture principles, SOLID design, and proper documentation (HLD/LLD) to ensure scalability, maintainability, and ease of future enhancements.
+
+
 
