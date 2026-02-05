@@ -13,21 +13,41 @@ The **Smart Skill-Based Task Marketplace** allows:
 The system is designed to simulate how real-world freelance and talent marketplaces work, focusing on **scalability, security, and clean design**.
 
 ## 🏗️ System Architecture (High Level)
-Frontend (React + Tailwind)
-          |
-          v
-API Gateway (Spring Cloud Gateway)
-          |
--------------------------------------------------
-|        |        |        |        |            |
-Auth   Profile   Task     Bid     Review   Notification
-Service Service  Service  Service  Service    Service
-          |
-          v
-Kafka (Event Bus)
-          |
-          v
-MySQL Database
+flowchart TB
+    FE[Frontend<br/>React + Tailwind]
+
+    GW[API Gateway<br/>Spring Cloud Gateway]
+
+    FE --> GW
+
+    subgraph Microservices
+        AUTH[Auth Service]
+        PROFILE[Profile Service]
+        TASK[Task Service]
+        BID[Bid Service]
+        REVIEW[Review Service]
+        NOTIF[Notification Service]
+    end
+
+    GW --> AUTH
+    GW --> PROFILE
+    GW --> TASK
+    GW --> BID
+    GW --> REVIEW
+    GW --> NOTIF
+
+    AUTH --> KAFKA
+    PROFILE --> KAFKA
+    TASK --> KAFKA
+    BID --> KAFKA
+    REVIEW --> KAFKA
+    NOTIF --> KAFKA
+
+    KAFKA[Kafka<br/>Event Bus]
+    DB[(MySQL Database)]
+
+    KAFKA --> DB
+
 
 
 
