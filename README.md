@@ -22,3 +22,20 @@ The system is designed to simulate how real-world freelance and talent marketpla
 7. Built a React + Tailwind CSS frontend with role-based dashboards, enabling users to interact with backend services through a clean and intuitive UI.
 8. Set up CI/CD pipelines using Jenkins to automate build, test, and Docker image creation processes.
 9. Followed clean architecture principles, SOLID design, and proper documentation (HLD/LLD) to ensure scalability, maintainability, and ease of future enhancements.
+
+# Repository Structure
+smart-skill-marketplace/
+├── backend/
+│   ├── api-gateway/
+│   ├── auth-service/
+│   ├── task-service/
+│   ├── bid-service/
+│   └── docker-compose.yml
+├── frontend/
+│   └── skill-marketplace-ui/
+├── design/
+│   ├── HLD.md
+│   ├── LLD.md
+│   └── events.md
+└── README.md
+
