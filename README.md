@@ -118,17 +118,6 @@ This ensures:
 
 ---
 
-## 🔮 Future Enhancements
-
-- AI-based skill matching and ranking
-- ElasticSearch for advanced task search
-- Kubernetes deployment
-- Payment & escrow simulation
-- Monitoring with Prometheus and Grafana
-- Fraud detection and reputation scoring
-
----
-
 ## 🧪 How to Run (Local Setup)
 
 > Prerequisites:
@@ -150,6 +139,24 @@ docker-compose up -d
 7. Built a React + Tailwind CSS frontend with role-based dashboards, enabling users to interact with backend services through a clean and intuitive UI.
 8. Set up CI/CD pipelines using Jenkins to automate build, test, and Docker image creation processes.
 9. Followed clean architecture principles, SOLID design, and proper documentation (HLD/LLD) to ensure scalability, maintainability, and ease of future enhancements.
+
+
+## 🔮 Future Enhancements
+
+- AI-based skill matching and ranking
+- ElasticSearch for advanced task search
+- Kubernetes deployment
+- Payment & escrow simulation
+- Monitoring with Prometheus and Grafana
+- Fraud detection and reputation scoring
+
+---
+
+
+ ## Author
+Aniket Singh
+Java Backend Developer | Spring Boot | Microservices
+Actively learning and building industry-grade backend systems.
 
 
 
