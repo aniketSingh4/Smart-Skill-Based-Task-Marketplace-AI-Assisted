@@ -52,39 +52,39 @@ flowchart TB
 
 
 # Repository Structure
-flowchart TB
-    FE[🎨 Frontend<br/>React + Tailwind]
-    GW[🚪 API Gateway<br/>Spring Cloud Gateway]
-
-    FE --> GW
-
-    subgraph Backend Microservices
-        AUTH[🔐 Auth Service]
-        PROFILE[👤 Profile Service]
-        TASK[📝 Task Service]
-        BID[💰 Bid Service]
-        REVIEW[⭐ Review Service]
-        NOTIF[🔔 Notification Service]
-    end
-
-    GW --> AUTH
-    GW --> PROFILE
-    GW --> TASK
-    GW --> BID
-    GW --> REVIEW
-    GW --> NOTIF
-
-    AUTH --> KAFKA
-    PROFILE --> KAFKA
-    TASK --> KAFKA
-    BID --> KAFKA
-    REVIEW --> KAFKA
-    NOTIF --> KAFKA
-
-    KAFKA[📨 Kafka<br/>Event Bus]
-    DB[(🗄️ MySQL Database)]
-
-    KAFKA --> DB
+📦 smart-skill-marketplace
+│
+├─ 🎨 frontend
+│  └─ ⚛️ skill-marketplace-ui
+│     ├─ React
+│     └─ Tailwind CSS
+│
+├─ 🧠 backend
+│  │
+│  ├─ 🚪 api-gateway
+│  │  └─ Spring Cloud Gateway
+│  │
+│  ├─ 🔐 auth-service
+│  ├─ 👤 profile-service
+│  ├─ 📝 task-service
+│  ├─ 💰 bid-service
+│  ├─ ⭐ review-service
+│  ├─ 🔔 notification-service
+│  │
+│  ├─ 📨 kafka
+│  │  └─ Event Bus Configuration
+│  │
+│  ├─ 🗄️ mysql
+│  │  └─ Database Schemas
+│  │
+│  └─ 🐳 docker-compose.yml
+│
+├─ 📐 design
+│  ├─ 🧩 HLD.md        # High-Level Design
+│  ├─ 🔍 LLD.md        # Low-Level Design
+│  └─ 📡 events.md     # Kafka Event Contracts
+│
+└─ 📘 README.md
 
 
 
